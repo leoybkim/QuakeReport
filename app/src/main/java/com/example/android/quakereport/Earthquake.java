@@ -6,27 +6,27 @@ package com.example.android.quakereport;
 public class Earthquake {
 
     // Create a state for each TextView in earthquake_list_item.xml
-    private String mMagnitude;
+    private double mMagnitude;
     private String mLocation;
-    private String mDate;
+    private long mTime;
 
     /**
      * Constructor for Earthquake object
      * @param magnitude
      * @param location
-     * @param date
+     * @param time
      */
-    public Earthquake(String magnitude, String location, String date) {
+    public Earthquake(double magnitude, String location, long time) {
         mMagnitude = magnitude;
         mLocation = location;
-        mDate = date;
+        mTime = time;
     }
 
 
     // Getter methods
-    public String getMagnitude() { return mMagnitude; }
+    public double getMagnitude() { return mMagnitude; }
 
     public String getLocation() { return mLocation; }
 
-    public String getDate() { return mDate; }
+    public long getTimeInMilliseconds() { return mTime; }
 }
